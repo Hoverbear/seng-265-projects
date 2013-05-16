@@ -1,9 +1,0 @@
-# Information about exceptions/errors.
-The program will only throw errors if using the '-s' flag, which, if used, will throw exceptions whenever an abnormal input is defined.
-
-## Types of Exceptions
-1. InvalidOptionException: Thrown when someone puts in '?fmt 34', or '?pgwdth off', or anything else of the such. Note that this does not trigger on anything other then Ints and 'on'/'off', so '?fmt potato' will be silently handled as normal input.
-
-2. ValueError: This occurs when the user tries to do something like '?mrgn +off' or '?mrgn -5' when it would violate the given spec. '?mrgn off' should unquestionably be treated as an error, and I consider '?mrgn -5' when it would violate margin rules to be a user error that they should be informed of.
-
-3. WordTooBigException: Thrown when a word is too big to fit on a line and we can't fit it anywhere else.
